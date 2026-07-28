@@ -2,7 +2,7 @@
 set -e
 
 # =============================================================================
-# Deep TLDR — Setup Script
+# Deep TLDR - Setup Script
 # =============================================================================
 # Interactive installer that configures your research digest.
 # Run: bash setup.sh
@@ -20,10 +20,10 @@ NC='\033[0m' # No Color
 
 echo ""
 echo -e "${CYAN}╔══════════════════════════════════════════╗${NC}"
-echo -e "${CYAN}║        Deep TLDR — Setup Wizard          ║${NC}"
+echo -e "${CYAN}║        Deep TLDR - Setup Wizard            ║${NC}"
 echo -e "${CYAN}╚══════════════════════════════════════════╝${NC}"
 echo ""
-echo "This will configure your autonomous daily research digest."
+echo "This will configure your daily research digest."
 echo "Press Enter to accept defaults shown in [brackets]."
 echo ""
 
@@ -80,9 +80,9 @@ tz_input="${tz_input:-$detected_tz}"
 echo ""
 echo -e "${CYAN}── Output ─────────────────────────────────────${NC}"
 echo "Where should the digest go?"
-echo "  1) telegram-only  — just a message to your chat"
-echo "  2) github-only    — full markdown to a GitHub repo"
-echo "  3) both           — short Telegram summary + GitHub full digest"
+echo "  1) telegram-only  - just a message to your chat"
+echo "  2) github-only    - full markdown to a GitHub repo"
+echo "  3) both           - short Telegram summary + GitHub full digest"
 echo ""
 read -r -p "Output mode [3]: " mode_input
 case "${mode_input:-3}" in
@@ -113,9 +113,9 @@ fi
 echo ""
 echo -e "${CYAN}── Style ──────────────────────────────────────${NC}"
 echo "Summary style:"
-echo "  tldr   — 2-3 sentence summaries (quick scan)"
-echo "  deep   — full article reads with methodology"
-echo "  mixed  — short on Telegram, deep on GitHub"
+echo "  tldr   - 2-3 sentence summaries (quick scan)"
+echo "  deep   - full article reads with methodology"
+echo "  mixed  - short on Telegram, deep on GitHub"
 echo ""
 read -r -p "Style [mixed]: " style_input
 style_input="${style_input:-mixed}"

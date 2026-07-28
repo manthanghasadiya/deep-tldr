@@ -1,6 +1,6 @@
 ---
 name: deep-tldr
-description: "Deep TLDR research digest — autonomous daily briefing on your chosen topics"
+description: "Deep TLDR research digest - daily briefing on your chosen topics"
 version: 1.0.0
 author: manthanghasadiya
 license: MIT
@@ -10,7 +10,7 @@ metadata:
     homepage: https://github.com/manthanghasadiya/deep-tldr
 ---
 
-# Deep TLDR — Autonomous Research Digest
+# Deep TLDR - Research Digest
 
 This skill builds a daily deep-dive research digest on any topics you choose.
 It searches the web, reads full articles, writes structured markdown, optionally
@@ -84,7 +84,7 @@ searches for news, papers, tools, and vulnerabilities. Built-in topics:
 `ai`, `security`, `web-dev`, `devops`, `cloud`, `mobile`, `gaming`,
 `crypto`, `physics`, `biotech`, `startups`, `open-source`, `llm`, `mcp`
 
-Add your own with custom_topics — they go into a "custom" section that
+Add your own with custom_topics. They go into a custom section that
 searches for general news and papers under that keyword.
 
 ### Style Reference
@@ -135,5 +135,5 @@ Short summary with headlines + link to full digest on GitHub.
 ## Portable Prompts
 
 The raw prompt templates in `prompts/deep-tldr-prompt.md` work with **any
-agent** that has web search and file writing — Hermes, Claude Code, OpenCode,
-Codex, or custom agents. Just copy the prompt and adapt the delivery section.
+agent** that has web search and file writing (Hermes, Claude Code, OpenCode,
+Codex, or custom agents). Just copy the prompt and adapt the delivery section.

@@ -6,17 +6,17 @@
 
 <h1 align="center">🧠 Deep TLDR</h1>
 <p align="center"><b>Autonomous daily research digest for any AI agent</b></p>
-<p align="center"><i>Get a morning briefing on your topics — researched, summarized, and delivered by AI.</i></p>
+<p align="center"><i>Morning briefing on your topics. Researched, summarized, delivered.</i></p>
 
 ---
 
-Deep TLDR is an autonomous agent workflow that wakes up every morning, searches the web for the latest developments across your chosen topics, **reads every article in full**, and produces a structured research digest. It runs as a Hermes skill, but the prompt templates work with **any agent** that has web search and file writing — Claude Code, Codex, OpenCode, or custom agents.
+Deep TLDR is an agent workflow that searches the web for the latest developments across your chosen topics, **reads every article in full**, and produces a structured research digest. It runs as a Hermes skill, but the prompt templates work with **any agent** that has web search and file writing (Claude Code, Codex, OpenCode, or custom agents).
 
 **What makes this different from a newsletter or RSS feed:**
-- The agent doesn't just collect headlines — it **reads the full content** of each article
-- It produces structured analysis: plain-English summary + technical deep dive + why-it-matters
-- It deduplicates against past digests so you never see the same story twice
-- It can push structured markdown to GitHub, deliver a summary to Telegram, and even generate an **audio briefing** for your morning commute
+- It **reads the full content** of each article, not just headlines
+- Produces structured analysis: plain-English summary + technical deep dive + why-it-matters
+- Deduplicates against past digests so you never see the same story twice
+- Can push markdown to GitHub, deliver a summary to Telegram, or generate an **audio briefing**
 
 ## 👀 Example Output
 
@@ -48,7 +48,7 @@ into writing a malicious MCP server entry. No approval required.
 Third time this attack class has been reported against Kiro.
 
 **Why it matters:** MCP config files must be write-protected against
-agent tool use — the exact problem mcpsec is designed to solve.
+agent tool use. The exact problem mcpsec is designed to solve.
 ```
 
 Full example output: [daily/2026/07/21.md](daily/2026/07/21.md)
@@ -85,7 +85,7 @@ Run a full deep-tldr digest now
 hermes -s deep-tldr -q "Run a deep-tldr digest now"
 ```
 
-That's it. Your first digest arrives in minutes.
+Set up a cron job and you will get your first digest at the next scheduled run.
 
 ## ⚙️ Configuration
 
@@ -125,7 +125,7 @@ Edit `~/.hermes/skills/deep-tldr/config.yaml` after setup, or re-run `setup.sh`.
 
 ### Adding Custom Topics
 
-Just add entries to `custom_topics` in your config.yaml. Any topic works — the agent will search for news, papers, and GitHub repos under that keyword. No code changes needed.
+Just add entries to `custom_topics` in your config.yaml. Any topic works. The agent searches for news, papers, and GitHub repos under that keyword.
 
 ```
 custom_topics:
@@ -139,9 +139,9 @@ custom_topics:
 
 Enable `audio_briefing: true` and set your TTS preferences:
 
-- **Edge TTS** (default, free) — no setup needed
-- **Kokoro** — runs locally via Docker, more natural voices
-- **OpenAI TTS** — requires API key
+- **Edge TTS** (default, free) - no setup needed
+- **Kokoro** - runs locally via Docker
+- **OpenAI TTS** - requires API key
 
 Voices are configurable. For Edge TTS, run `edge-tts --list-voices` to see options.
 For Kokoro, check the web UI at `http://localhost:8880`.
@@ -193,7 +193,7 @@ PRs welcome! Areas to improve:
 
 ## 📄 License
 
-MIT — use it, fork it, ship it.
+|MIT license|
 
 ---
 
