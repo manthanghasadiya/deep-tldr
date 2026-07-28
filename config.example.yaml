@@ -1,0 +1,84 @@
+# =============================================================================
+# Deep TLDR — Configuration
+# =============================================================================
+# Copy this to config.yaml and fill in your preferences.
+# All settings have sensible defaults — you only NEED to set topics.
+
+# ─── Topics ─────────────────────────────────────────────────────────────────
+# These are the subjects deep-tldr will search for. You can set as many as
+# you want — the agent groups them into categories automatically.
+topics:
+  - ai
+  - security
+  - web-dev
+  - devops
+  - cloud
+  - mobile
+  - gaming
+  - crypto
+  - physics
+  - biotech
+  - startups
+  - open-source
+  - llm
+  - mcp
+
+# Add custom topics beyond the built-in list:
+custom_topics: []
+  # - rust
+  # - robotics
+  # - space
+
+# ─── Schedule ───────────────────────────────────────────────────────────────
+frequency: "daily"            # daily | twice-daily
+time_of_day: "08:00"          # 24h format, only used if frequency is daily
+# time_of_day_second: "20:00" # uncomment for twice-daily
+timezone: "America/New_York"  # Your IANA timezone
+
+# ─── Output Mode ────────────────────────────────────────────────────────────
+#   telegram-only  — digest delivered to Telegram (or other messaging platform)
+#   github-only    — digest written to a GitHub repo
+#   both           — short Telegram summary + full digest on GitHub
+output_mode: "both"
+
+# GitHub settings (required if output_mode is github or both):
+github:
+  repo_name: "my-intel-daily"
+  # Your GitHub username is detected from the gh CLI, or set explicitly:
+  # username: "your-github-username"
+  # Branch to push to:
+  branch: "main"
+  # File structure: daily/YYYY/MM/DD.md by default
+  # Or flat: DD-MM-YYYY.md
+  file_structure: "daily/YYYY/MM/DD.md"
+
+# ─── Audio Briefing ─────────────────────────────────────────────────────────
+audio_briefing: false         # true | false
+tts_provider: "edge"          # edge | kokoro | openai | elevenlabs
+tts_voice: "en-US-JennyNeural" # Voice name for TTS
+tts_speed: 1.0                # 0.8 — 1.5, speed multiplier
+kokoro_endpoint: "http://localhost:8880"  # Only needed if tts_provider is kokoro
+
+# ─── Research Papers ────────────────────────────────────────────────────────
+research_papers: true         # true | false — separate paper breakdowns
+papers_folder: "papers/YYYY/MM/"  # relative to repo root
+
+# ─── Summary Style ──────────────────────────────────────────────────────────
+summary_style: "mixed"        # tldr | deep | mixed
+  # tldr   — 2-3 sentence summaries, headlines-only delivery
+  # deep   — full article reads with methodology, results, implications
+  # mixed  — tldr summaries in Telegram, deep reads in GitHub markdown
+
+# ─── Delivery Platform ──────────────────────────────────────────────────────
+# If using telegram or both, set your Telegram chat ID:
+# telegram_chat_id: "-1001234567890"
+# telegram_thread_id: "54"  # Optional, for forum topics
+
+# ─── Dedup ──────────────────────────────────────────────────────────────────
+# Articles are tracked by URL to avoid repeats across runs.
+dedup_file: "~/.hermes/cron/deep-tldr-seen-urls.txt"
+dedup_lookback_days: 7       # Days of past digests to check for story-level dedup
+
+# ─── Max Items ──────────────────────────────────────────────────────────────
+max_items_per_run: 7          # How many articles to include (3-12)
+min_items_per_section: 1      # Minimum items per topic section
