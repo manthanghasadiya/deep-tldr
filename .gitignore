@@ -1,0 +1,41 @@
+# Deep TLDR - gitignore
+
+# Config (user secrets, tokens)
+config.yaml
+
+# Audio output
+*.mp3
+*.ogg
+*.wav
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Node (if any tooling uses it)
+node_modules/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Hermes generated files
+seen-urls.txt
+
+# Temp
+tmp/
+temp/

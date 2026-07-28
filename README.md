@@ -51,7 +51,7 @@ Third time this attack class has been reported against Kiro.
 agent tool use. The exact problem mcpsec is designed to solve.
 ```
 
-Full example output: [daily/2026/07/21.md](daily/2026/07/21.md)
+See a real example: [github.com/manthanghasadiya/intel/blob/main/daily/2026/07/21.md](https://github.com/manthanghasadiya/intel/blob/main/daily/2026/07/21.md)
 
 ## 🚀 Quick Start
 
@@ -193,7 +193,7 @@ PRs welcome! Areas to improve:
 
 ## 📄 License
 
-|MIT license|
+MIT License. See [LICENSE](LICENSE) for full text.
 
 ---
 
